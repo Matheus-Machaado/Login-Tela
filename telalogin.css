@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --color1: #27374D;
+    --color2: #9DB2BF;
+    --color3: #526D82;
+    --color4: #b8c8d1;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    background-color: var(--color1);
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    min-width: 90vw;
+    max-height: 90vh;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+section {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    justify-content: center;
+}
+
+section#image {
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+#image img {
+    width: 480px;  
+}
+
+#image p {
+    color: var(--color1);
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+section#formulario {
+    background-color: var(--color2);
+}
+
+#formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contlogin {
+    width: 400px;
+    height: 450px;
+    background-color: var(--color3);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px black;
+}
+
+.contlogin h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: xx-large;
+    margin-bottom: 40px;
+}
+
+form label {
+    font-size: large;
+    color: #ffffff;
+}
+
+form input {
+    border: none;
+    padding: 13px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    margin: 10px 0 25px 0;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.308);
+}
+
+#ipassword {
+    margin-bottom: 60px;
+}
+
+#ibutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    background-color: var(--color2); 
+    color: #ffffff;
+    padding: 10px;
+    font-weight: bold;
+    font-size: large;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.589);
+    transition: .2s ease-in-out;
+}
+
+#ibutton:hover {
+    cursor: pointer;
+    background-color: var(--color4);
+    box-shadow: none;
+}
+
+#ibutton i {
+    font-weight: bolder;
+    animation: run 5s infinite;
+}
+
+@keyframes run {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(80px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@media (max-width: 1129px) {
+    main {
+        width: 100vw;
+        min-height: 100%;
+        border-radius: 0px;
+    }
+}
+
+@media (max-width: 795px) {
+    section#image {
+        display: none;
+    }
+
+    section#formulario {
+        display: flex;
+        width: 100vw;
+        height: 100vh; 
+    }
+}
+
+@media (max-width: 521px) {
+    .contlogin {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh; 
+        border-radius: 0;
+    }
+
+    .contlogin form {
+        width: 100vw;
+    }
+
+    section#formulario {
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+
+
